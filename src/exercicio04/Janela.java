@@ -67,7 +67,7 @@ public class Janela {
 						formulario.add(precoProduto);
 						formulario.setVisible(true);
 
-//aa
+
 
 					}else{
 						formulario.setVisible(false);
