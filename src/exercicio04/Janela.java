@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class Janela {
-//asjkjas
+
 	double preco2=0;
 
 	public void janelaGrafica(){
