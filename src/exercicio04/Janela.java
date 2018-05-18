@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 public class Janela {
 
 	double preco2=0;
-
+//
 	public void janelaGrafica(){
 		//INCIAR JFRAME
 		JFrame formulario = new JFrame();
