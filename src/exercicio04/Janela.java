@@ -58,15 +58,24 @@ public class Janela {
 					preco2 = Double.parseDouble(precoDigitado.getText());
 
 					if(combo.getSelectedItem().equals("À Vista")){
-						preco2=preco2-(preco2*0.1);
-						formulario.setVisible(false);
-						botao.setBounds(150, 160, 200, 20);
-						nomeProduto.setText("Produto: "+nomeDigitado.getText());
-						precoProduto.setText("Preço: R$"+String.valueOf(preco2));
-						formulario.add(nomeProduto);
-						formulario.add(precoProduto);
-						formulario.setVisible(true);
-
+						if(preco2>500){
+							preco2=preco2-(preco2*0.1);
+							formulario.setVisible(false);
+							botao.setBounds(150, 160, 200, 20);
+							nomeProduto.setText("Produto: "+nomeDigitado.getText());
+							precoProduto.setText("Preço: R$"+String.valueOf(preco2));
+							formulario.add(nomeProduto);
+							formulario.add(precoProduto);
+							formulario.setVisible(true);
+						}else{
+							formulario.setVisible(false);
+							botao.setBounds(150, 160, 200, 20);
+							nomeProduto.setText("Produto: "+nomeDigitado.getText());
+							precoProduto.setText("Preço: R$"+String.valueOf(preco2));
+							formulario.add(nomeProduto);
+							formulario.add(precoProduto);
+							formulario.setVisible(true);
+						}
 
 
 					}else{
@@ -77,7 +86,7 @@ public class Janela {
 						formulario.add(nomeProduto);
 						formulario.add(precoProduto);
 						formulario.setVisible(true);
-						
+
 					}
 				}catch (Exception e2) {
 					formulario.setVisible(false);
@@ -91,7 +100,7 @@ public class Janela {
 
 			}
 		});
-		
+
 		//ADICIONAR ITENS AO JFRAME
 		formulario.add(nome);
 		formulario.add(preco);
@@ -99,10 +108,10 @@ public class Janela {
 		formulario.add(precoDigitado);
 		formulario.add(combo);
 		formulario.add(botao);
-		
+
 		//ALTERAR VISIBILIDADE DO JFRAME
 		formulario.setVisible(true);
-		
+
 
 	}
 
